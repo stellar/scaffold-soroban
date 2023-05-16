@@ -5,7 +5,6 @@
     "node": ">=16.14.0 <17.0.0"
   },
   "workspaces": [
-    "modules/shared",
     "modules/mint-token",
     "modules/payment"
   ],
