@@ -1,0 +1,55 @@
+{
+  "license": "Apache-2.0",
+  "private": true,
+  "engines": {
+    "node": ">=16.14.0 <17.0.0"
+  },
+  "workspaces": [
+    "modules/shared",
+    "modules/mint-token",
+    "modules/payment"
+  ],
+  "scripts": {
+    "start:mint": "yarn workspace mint-token start",
+    "start:payment": "yarn workspace payment start",
+    "install-if-package-changed": "git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep --quiet yarn.lock && yarn install || exit 0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "concurrently 'pretty-quick --staged' 'lint-staged'",
+      "post-merge": "yarn install-if-package-changed",
+      "post-checkout": "yarn install-if-package-changed"
+    }
+  },
+  "lint-staged": {
+    "modules/**/*.ts?(x)": [
+      "eslint --fix --max-warnings 0"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "last 3 chrome version",
+      "last 3 firefox version"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version"
+    ]
+  },
+  "dependencies": {
+    "eslint": "7.12.1",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-import-resolver-typescript": "^2.0.0",
+    "eslint-plugin-flowtype": "4.x",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "2.x",
+    "eslint-webpack-plugin": "^2.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "pretty-quick": "^3.1.3"
+  }
+}

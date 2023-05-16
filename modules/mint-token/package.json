@@ -1,0 +1,9 @@
+{
+  "name": "mint-token",
+  "prettier": "@stellar/prettier-config",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "echo \"Start has not been implemented\" && exit 1"
+  }
+}
