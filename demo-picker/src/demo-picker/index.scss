@@ -1,0 +1,36 @@
+
+#root {
+  width: 100%;
+  height: 10vh;
+}
+
+.layout {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  max-width: var(--layout-window-width-max);
+  width: 100%;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+
+  .demo-title {
+    flex: 3;
+    font-size: 24px;
+    color: var(--color-gray-90);
+    font-weight: 400;
+  }
+  .demo-selector {
+    flex: 1;
+  }
+}
+
+.demo-row {
+  height: 100%;
+  width: 100%;
+}
