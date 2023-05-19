@@ -26,7 +26,7 @@ function DemoPicker() {
 
   return (
     <>
-      <Layout.Header hasThemeSwitch projectTitle="" />
+      <Layout.Header hasThemeSwitch projectId="scaffold-soroban-demo-picker" />
       <div className="layout">
         <div className="title-row">
           <Heading as="h1" size="lg" className="demo-title">
