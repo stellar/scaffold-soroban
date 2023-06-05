@@ -1,6 +1,8 @@
 import React from "react"
 import { Card, Heading, Layout, Select } from "@stellar/design-system"
 
+// import { SendPayment } from "@payment-react/send-payment"
+
 import "./index.scss"
 
 const DEMOS = [
@@ -17,6 +19,7 @@ function DemoPicker() {
 
   function renderActiveDemo(demo: string) {
     switch (demo) {
+      // case 'payment': return <SendPayment showHeader={false} />
       default:
         // render selected demo once they are available
         return <div />

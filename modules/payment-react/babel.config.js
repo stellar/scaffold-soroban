@@ -1,5 +1,4 @@
 module.exports = {
-  "babelrcRoots": [ "./", "../modules/payment-react" ],
   plugins: ["dynamic-import-node", "@babel/plugin-proposal-optional-chaining"],
   presets: [
     "@babel/preset-typescript",

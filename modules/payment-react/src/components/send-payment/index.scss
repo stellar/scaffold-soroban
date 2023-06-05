@@ -1,0 +1,149 @@
+.account-badge-row {
+  display: flex;
+  justify-content: flex-end;
+  height: 35px;
+
+  .account-badge {
+    width: 125px;
+
+    .Badge {
+      display: flex;
+      height: 28px;
+      justify-content: space-between;
+      padding: 0.25rem 0.5rem;
+
+      .badge-pubkey {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .payment {
+    width: 375px;
+    height: 350px;
+    margin-top: 5rem;
+
+    .loading {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Card {
+      height: auto;
+    }
+
+    .step-count {
+      color: var(--color-gray-60);
+    }
+
+    .title {
+      margin-bottom: 0;
+    }
+
+    .balance {
+      margin-top: 0;
+      color: var(--color-gray-60);
+    }
+
+    .tx-details {
+      display: flex;
+      flex-direction: column;
+
+      .tx-detail-item {
+        display: flex;
+        justify-content: space-between;
+
+        .detail-header {
+          color: var(--color-gray-60);
+        }
+
+        .detail-value {
+          font-weight: var(--font-weight-regular);
+          font-family: var(--font-family-monospace);
+        }
+
+        .dest-identicon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .identicon {
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+          }
+        }
+
+        p {
+          margin-bottom: 0.025rem;
+        }
+      }
+    }
+
+    .signed-xdr {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      .detail-header {
+        color: var(--color-gray-60);
+      }
+
+      .xdr-copy {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+      }
+
+      .xdr-data {
+        display: -webkit-box;
+        width: 100%;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .submit-row {
+    margin-top: 6rem;
+  }
+
+  .submit-row-destination {
+    margin-top: 2rem;
+  }
+
+  .submit-row-send {
+    margin-top: 2rem;
+  }
+
+  .submit-row-fee {
+    margin-top: 2rem;
+  }
+
+  .submit-row-confirm {
+    margin-top: 1rem;
+
+    .Button {
+      position: relative;
+
+      .Loader {
+        position: absolute;
+        right: 80px;
+      }
+    }
+  }
+}
