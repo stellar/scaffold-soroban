@@ -18,18 +18,16 @@ const commonConfig = (env) => ({
   },
   output: {
     path: BUILD_PATH,
-    filename: '[contenthash].js',
+    filename: "[contenthash].js",
   },
   resolve: {
+    modules: ["node_modules", path.resolve(__dirname, "../../modules/payment-react/src")],
     extensions: [".ts", ".tsx", ".js"],
     plugins: [
       new TsconfigPathsPlugin({
         configFile: path.resolve(__dirname, "../tsconfig.json"),
       })
-    ],
-    alias: {
-      "@payment-react/send-payment": path.resolve(__dirname, "../../modules/payment-react/src/components/send-payment")
-    }
+    ]
   },
   module: {
     rules: [

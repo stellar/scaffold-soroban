@@ -1,7 +1,7 @@
 import React from "react"
 import { Card, Heading, Layout, Select } from "@stellar/design-system"
 
-// import { SendPayment } from "@payment-react/send-payment"
+import { SendPayment } from "../../../modules/payment-react/src/components/send-payment"
 
 import "./index.scss"
 
@@ -19,7 +19,7 @@ function DemoPicker() {
 
   function renderActiveDemo(demo: string) {
     switch (demo) {
-      // case 'payment': return <SendPayment showHeader={false} />
+      case 'payment': return <SendPayment showHeader={false} />
       default:
         // render selected demo once they are available
         return <div />
