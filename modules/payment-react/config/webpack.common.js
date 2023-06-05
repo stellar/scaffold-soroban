@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
@@ -11,25 +12,25 @@ const BUILD_PATH = path.resolve(__dirname, "../build");
 
 const commonConfig = (env) => ({
   entry: {
-    index: ["babel-polyfill", path.resolve(__dirname, "../src/index.tsx")]
+    index: ["babel-polyfill", path.resolve(__dirname, "../src/index.tsx")],
   },
   watchOptions: {
     ignored: ["node_modules/**/*", "build/**/*"],
   },
   output: {
     path: BUILD_PATH,
-    filename: '[contenthash].js',
+    filename: "[contenthash].js",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
     plugins: [
       new TsconfigPathsPlugin({
         configFile: path.resolve(__dirname, "../tsconfig.json"),
-      })
+      }),
     ],
-    alias: {
-      "@payment-react/send-payment": path.resolve(__dirname, "../../modules/payment-react/src/components/send-payment")
-    }
+    fallback: {
+      buffer: require.resolve("buffer/"),
+    },
   },
   module: {
     rules: [
@@ -116,10 +117,13 @@ const commonConfig = (env) => ({
       filename: "style.min.css",
       chunkFilename: "[name].min.css",
     }),
+    new webpack.ProvidePlugin({
+      Buffer: ["buffer", "Buffer"],
+    }),
   ],
   stats: DEFAULT_STATS,
   devServer: {
-    hot: true
+    hot: true,
   },
 });
 
