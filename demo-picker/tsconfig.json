@@ -1,6 +1,6 @@
 {
   "extends": "@stellar/tsconfig",
-  "include": ["src", "public"],
+  "include": ["src", "public", "../modules/payment-react/src"],
   "exclude": ["build"],
   "compilerOptions": {
     "baseUrl": "src/",
@@ -10,9 +10,6 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
-    "allowSyntheticDefaultImports": true,
-    "paths": {
-      "@payment-react/send-payment": ["../modules/payment-react/src/components/send-payment"],
-    }
+    "allowSyntheticDefaultImports": true
   }
 }
