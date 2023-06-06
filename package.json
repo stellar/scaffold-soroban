@@ -5,8 +5,8 @@
     "node": ">=16.14.0"
   },
   "workspaces": [
-    "modules/mint-token",
-    "modules/payment-react",
+    "@modules/mint-token",
+    "@modules/payment-react",
     "demo-picker"
   ],
   "scripts": {

@@ -1,12 +1,12 @@
 import React from "react";
 import { Button, Heading, Profile } from "@stellar/design-system";
-import { NetworkDetails, signTx } from "helpers/network";
+import { NetworkDetails, signTx } from "../../helpers/network";
 import {
   makePayment,
   getTxBuilder,
   parseTokenAmount,
   getServer,
-} from "helpers/soroban";
+} from "../../helpers/soroban";
 
 interface ConfirmPaymentProps {
   amount: string;

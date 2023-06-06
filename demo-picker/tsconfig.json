@@ -1,6 +1,6 @@
 {
   "extends": "@stellar/tsconfig",
-  "include": ["src", "public", "../modules/payment-react/src"],
+  "include": ["src", "public"],
   "exclude": ["build"],
   "compilerOptions": {
     "baseUrl": "src/",

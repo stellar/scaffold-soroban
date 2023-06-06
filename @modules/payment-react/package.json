@@ -1,5 +1,5 @@
 {
-  "name": "soroban-react-payment",
+  "name": "@modules/payment-react",
   "version": "1.0.0",
   "description": "An example dapp for making payments on Soroban",
   "main": "index.js",

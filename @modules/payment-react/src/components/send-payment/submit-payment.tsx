@@ -8,7 +8,7 @@ import {
   Loader,
   Profile,
 } from "@stellar/design-system";
-import { copyContent } from "helpers/dom";
+import { copyContent } from "../../helpers/dom";
 
 interface SubmitPaymentProps {
   amount: string;

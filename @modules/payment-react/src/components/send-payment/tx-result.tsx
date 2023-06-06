@@ -6,7 +6,7 @@ import {
   Icon,
   Heading,
 } from "@stellar/design-system";
-import { copyContent } from "helpers/dom";
+import { copyContent } from "../../helpers/dom";
 
 interface TxResultProps {
   resultXDR: string;

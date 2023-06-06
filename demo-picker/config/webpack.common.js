@@ -11,7 +11,7 @@ const BUILD_PATH = path.resolve(__dirname, "../build");
 
 const commonConfig = (env) => ({
   entry: {
-    index: ["babel-polyfill", path.resolve(__dirname, "../src/index.tsx")]
+    index: ["babel-polyfill", path.resolve(__dirname, "../src/index.tsx")],
   },
   watchOptions: {
     ignored: ["node_modules/**/*", "build/**/*"],
@@ -21,13 +21,13 @@ const commonConfig = (env) => ({
     filename: "[contenthash].js",
   },
   resolve: {
-    modules: ["node_modules", path.resolve(__dirname, "../../modules/payment-react/src")],
+    // modules: ["node_modules", path.resolve(__dirname, "../../modules/payment-react/src")],
     extensions: [".ts", ".tsx", ".js"],
     plugins: [
       new TsconfigPathsPlugin({
         configFile: path.resolve(__dirname, "../tsconfig.json"),
-      })
-    ]
+      }),
+    ],
   },
   module: {
     rules: [
@@ -117,7 +117,7 @@ const commonConfig = (env) => ({
   ],
   stats: DEFAULT_STATS,
   devServer: {
-    hot: true
+    hot: true,
   },
 });
 

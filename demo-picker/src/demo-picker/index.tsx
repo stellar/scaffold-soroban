@@ -1,14 +1,11 @@
-import React from "react"
-import { Card, Heading, Layout, Select } from "@stellar/design-system"
+import React from "react";
+import { Card, Heading, Layout, Select } from "@stellar/design-system";
 
-import { SendPayment } from "../../../modules/payment-react/src/components/send-payment"
+import { SendPayment } from "@modules/payment-react/src/components/send-payment";
 
-import "./index.scss"
+import "./index.scss";
 
-const DEMOS = [
-  "payment",
-  "mint-token"
-]
+const DEMOS = ["payment", "mint-token"];
 
 function DemoPicker() {
   const [activeDemo, setActiveDemo] = React.useState(DEMOS[0]);
@@ -19,11 +16,12 @@ function DemoPicker() {
 
   function renderActiveDemo(demo: string) {
     switch (demo) {
-      case 'payment': return <SendPayment showHeader={false} />
+      case "payment":
+        return <SendPayment showHeader={false} />;
       default:
         // render selected demo once they are available
-        return <div />
-        // throw new Error(`Demo not implemented: ${demo}`)
+        return <div />;
+      // throw new Error(`Demo not implemented: ${demo}`)
     }
   }
 
@@ -42,7 +40,7 @@ function DemoPicker() {
               fieldSize="sm"
               onChange={handleChange}
             >
-              {DEMOS.map(demo => (
+              {DEMOS.map((demo) => (
                 <option value={demo}>{demo}</option>
               ))}
             </Select>
@@ -55,7 +53,7 @@ function DemoPicker() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export { DemoPicker }
+export { DemoPicker };
