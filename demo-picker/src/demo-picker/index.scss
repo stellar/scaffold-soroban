@@ -2,6 +2,8 @@
 #root {
   width: 100%;
   height: 10vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .layout {
@@ -31,4 +33,16 @@
 .demo-row {
   height: 100%;
   width: 100%;
+
+  .layout {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+
+    .payment {
+      .signed-xdr {
+        color: black;
+      }
+    }
+  }
 }

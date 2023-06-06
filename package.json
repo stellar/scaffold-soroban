@@ -5,14 +5,14 @@
     "node": ">=16.14.0"
   },
   "workspaces": [
-    "modules/mint-token",
-    "modules/payment-react",
+    "@modules/mint-token",
+    "@modules/payment-react",
     "demo-picker"
   ],
   "scripts": {
     "start": "yarn workspace demo-picker start",
-    "start:mint": "yarn workspace mint-token start",
-    "start:payment-react": "yarn workspace payment-react start",
+    "start:mint": "yarn workspace @modules/mint-token start",
+    "start:payment-react": "yarn workspace @modules/payment-react start",
     "install-if-package-changed": "git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep --quiet yarn.lock && yarn install || exit 0"
   },
   "husky": {
