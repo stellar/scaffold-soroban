@@ -43,7 +43,7 @@ function DemoPicker() {
               onChange={handleChange}
             >
               {DEMOS.map(demo => (
-                <option value={demo}>{demo}</option>
+                <option key={demo} value={demo}>{demo}</option>
               ))}
             </Select>
           </div>
