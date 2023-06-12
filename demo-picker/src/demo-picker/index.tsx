@@ -1,13 +1,13 @@
 import React from "react"
 import { Card, Heading, Layout, Select } from "@stellar/design-system"
 
-import { SendPayment } from "../../../modules/payment-react/src/components/send-payment"
+import { SendPayment } from "@modules/payment-react/src/components/send-payment"
 
 import "./index.scss"
 
 const DEMOS = [
   "payment",
-  "mint-token"
+  // "mint-token"
 ]
 
 function DemoPicker() {
@@ -21,7 +21,6 @@ function DemoPicker() {
     switch (demo) {
       case 'payment': return <SendPayment showHeader={false} />
       default:
-        // render selected demo once they are available
         return <div />
         // throw new Error(`Demo not implemented: ${demo}`)
     }
