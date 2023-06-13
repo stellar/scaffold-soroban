@@ -9,9 +9,7 @@ const prodConfig = (env = { PRODUCTION: false, TRANSLATIONS: false }) => ({
   mode: "production",
   optimization: {
     minimize: env.PRODUCTION,
-    splitChunks: {
-      chunks: (chunk) => chunk.name === "index"
-    },
+    runtimeChunk: "single",
   },
 
   plugins: [
