@@ -10,6 +10,7 @@
     "demo-picker"
   ],
   "scripts": {
+    "build": "yarn workspace demo-picker build",
     "start": "yarn workspace demo-picker start",
     "start:mint": "yarn workspace @modules/mint-token start",
     "start:payment-react": "yarn workspace @modules/payment-react start",
