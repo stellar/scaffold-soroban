@@ -1,3 +1,8 @@
+body {
+  color: var(--color-gray-90);
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-family-monospace);
+}
 
 #root {
   width: 100%;
@@ -38,12 +43,5 @@
     display: flex;
     justify-content: unset;
     align-items: center;
-
-    .payment {
-      color: black;
-      .signed-xdr {
-        color: black;
-      }
-    }
   }
 }
