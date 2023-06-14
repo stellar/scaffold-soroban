@@ -9,7 +9,7 @@ The repo is organized using yarn workspaces, and git submodules:
 
 ## Prerequisites
 
-You will need
+You will need:
 
 - Node (>=16.14.0 <17.0.0): https://nodejs.org/en/download/
 - Yarn (v1.22.5 or newer): https://classic.yarnpkg.com/en/docs/install
