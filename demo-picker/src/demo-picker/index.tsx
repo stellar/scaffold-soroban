@@ -18,9 +18,9 @@ function DemoPicker() {
   function renderActiveDemo(demo: string) {
     switch (demo) {
       case "payment":
-        return <SendPayment showHeader={false} />;
+        return <SendPayment hasHeader={false} />;
       case "mint-token":
-        return <MintToken />;
+        return <MintToken hasHeader={false} />;
       default:
         return <div />;
       // throw new Error(`Demo not implemented: ${demo}`)

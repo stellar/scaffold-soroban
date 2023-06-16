@@ -28,7 +28,7 @@ You will need:
    cd scaffold-soroban
    ```
 
-2. Pull the submodules in if this is your first time pulling the repo or every time you want to get updated submodules
+2. Pull the submodules in if this is your first time pulling the repo
 
    ```
    git submodule update --init --recursive
@@ -38,6 +38,12 @@ You will need:
 
    ```
    yarn
+   ```
+
+4. If you need to update the submodules to the latest, run:
+
+   ```
+   git submodule update --remote
    ```
 
 ## Build the Project
