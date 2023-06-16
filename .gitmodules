@@ -1,3 +1,6 @@
 [submodule "@modules/payment-react"]
 	path = @modules/payment-react
 	url = git@github.com:stellar/soroban-react-payment.git
+[submodule "@modules/mint-token"]
+	path = @modules/mint-token
+	url = git@github.com:stellar/soroban-react-mint-token.git
