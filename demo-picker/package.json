@@ -48,6 +48,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@modules/mint-token": "1.0.0",
     "@modules/payment-react": "1.0.0",
     "@stellar/design-system": "^1.0.0-beta.9",
     "buffer": "^6.0.3",
