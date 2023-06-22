@@ -35,6 +35,16 @@ const commonConfig = (env) => ({
   module: {
     rules: [
       {
+        test: /\.m?js/,
+        type: "javascript/auto",
+      },
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
+      {
         test: /\.html$/,
         use: [
           {
