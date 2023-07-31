@@ -7,6 +7,7 @@ const devConfig = {
   devtool: "inline-source-map",
   devServer: {
     port: 9000,
+    historyApiFallback: true
   },
   plugins: [
     new webpack.DefinePlugin({
