@@ -7,17 +7,20 @@ import { Card, Heading, Layout, Select } from "@stellar/design-system";
 
 import { SendPayment } from "@modules/payment-react/src/components/send-payment";
 import { MintToken } from "@modules/mint-token/src/components/mint-tokens";
+import { AppSubRouter as AtomicSwap } from "@modules/atomic-swap-react/src/sub-router";
 
 import "@stellar/design-system/build/styles.min.css";
 import "./index.scss";
 
-const DEMOS = ["mint-token", "payment"];
+const DEMOS = ["mint-token", "payment", "atomic-swap"];
 
 const OutletLayout = () => {
   const nav = useNavigate()
   const { pathname } = useLocation()
   const getActiveTab = (path: string) => {
     switch (true) {
+      case path.includes("atomic-swap"):
+        return "atomic-swap"
       case path.includes("payment"):
         return "payment"
       default:
@@ -27,6 +30,8 @@ const OutletLayout = () => {
   }
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     switch (event.target.value) {
+      case "atomic-swap":
+        return nav("/atomic-swap", { replace: true })
       case "payment":
         return nav("/payment", { replace: true });
       case "mint-token":
@@ -76,11 +81,11 @@ const Main = () => (
       <Route path="/" element={<OutletLayout />}>
         <Route index element={<MintToken hasHeader={false} />} />
         <Route path="/payment" element={<SendPayment hasHeader={false} />} />
+        <Route path="/atomic-swap/*" element={<AtomicSwap basePath={`${window.location.origin}/atomic-swap`} hasHeader={false} />} />
       </Route>
     </Routes>
   </BrowserRouter>
 )
-
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(<Main />);

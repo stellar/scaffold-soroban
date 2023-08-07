@@ -20,6 +20,7 @@ const commonConfig = (env) => ({
   output: {
     path: BUILD_PATH,
     filename: "[contenthash].js",
+    publicPath: "/"
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"],

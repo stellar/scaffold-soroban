@@ -7,6 +7,8 @@ The repo is organized using yarn workspaces, and git submodules:
 - `@modules/payment-react`: this is an example dapp for making a payment on Soroban ([soroban-react-payment](https://github.com/stellar/soroban-react-payment/))
 - `@modules/mint-token`: this is an example dapp for minting a standard token on Soroban (
   [soroban-react-mint-token](https://github.com/stellar/soroban-react-mint-token/))
+- `@modules/atomic-swap-react`: this is an example dapp for swapping tokens atomically on Soroban (
+[soroban-react-atomic-swap](https://github.com/stellar/soroban-react-atomic-swap/))
 
 ## Prerequisites
 
