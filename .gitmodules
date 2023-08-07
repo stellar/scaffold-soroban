@@ -4,3 +4,6 @@
 [submodule "@modules/mint-token"]
 	path = @modules/mint-token
 	url = git@github.com:stellar/soroban-react-mint-token.git
+[submodule "@modules/atomic-swap"]
+	path = @modules/atomic-swap-react
+	url = git@github.com:stellar/soroban-react-atomic-swap.git
